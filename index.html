@@ -334,8 +334,8 @@
 
     .photo-tile-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 300px 300px 300px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 300px 300px;
       gap: 4px;
       padding: 0 5% 70px;
     }
@@ -509,7 +509,7 @@
       .about-accent-box { display: none; }
       .about-main-img { height: 280px; }
       .why-grid { grid-template-columns: 1fr 1fr; }
-      .photo-tile-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .photo-tile-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
       footer { flex-direction: column; text-align: center; }
       .footer-right { text-align: center; }
       .fgrow { grid-template-columns: 1fr; }
@@ -699,6 +699,9 @@
       </div>
       <div class="photo-tile">
         <img src="nemtecauto2.jpg" alt="Ram 1500 body off frame engine removal at Nemtec Automotive NWA" />
+      </div>
+      <div class="photo-tile">
+        <img src="nemtecauto4.jpg" alt="Honda Pioneer UTV on lift at Nemtec Automotive Hiwasse AR" />
       </div>
     </div>
   </section>
