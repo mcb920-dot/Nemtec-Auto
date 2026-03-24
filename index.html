@@ -334,8 +334,8 @@
 
     .photo-tile-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 280px 280px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 300px 300px 300px;
       gap: 4px;
       padding: 0 5% 70px;
     }
@@ -352,10 +352,7 @@
       transform: scale(1.05);
       filter: brightness(1) saturate(1);
     }
-    /* First tile spans 2 rows */
-    .photo-tile.tall {
-      grid-row: span 2;
-    }
+    .photo-tile.tall { grid-row: span 1; }
 
     /* ===================== ABOUT ===================== */
     #about { background: var(--steel); padding: 90px 5%; }
@@ -512,8 +509,7 @@
       .about-accent-box { display: none; }
       .about-main-img { height: 280px; }
       .why-grid { grid-template-columns: 1fr 1fr; }
-      .photo-tile-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
-      .photo-tile.tall { grid-row: span 1; }
+      .photo-tile-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
       footer { flex-direction: column; text-align: center; }
       .footer-right { text-align: center; }
       .fgrow { grid-template-columns: 1fr; }
@@ -689,17 +685,17 @@
     </div>
 
     <div class="photo-tile-grid">
-      <div class="photo-tile tall">
+      <div class="photo-tile">
         <img src="shop-exterior.jpg" alt="Nemtec Automotive LLC shop exterior - auto repair Bentonville AR mechanic Hiwasse Arkansas" />
       </div>
       <div class="photo-tile">
         <img src="shop-lift.jpg" alt="Vehicle on lift at Nemtec Automotive - professional auto repair Bentonville AR" />
       </div>
       <div class="photo-tile">
-        <img src="nemtecauto.jpg" alt="Engine swap on Kia Soul at Nemtec Automotive Hiwasse Arkansas" />
+        <img src="nemtecauto3.jpg" alt="Engine pull on square body Chevy at Nemtec Automotive Bentonville AR" />
       </div>
       <div class="photo-tile">
-        <img src="nemtecauto3.jpg" alt="Engine pull on square body Chevy at Nemtec Automotive Bentonville AR" />
+        <img src="nemtecauto.jpg" alt="Engine swap on Kia Soul at Nemtec Automotive Hiwasse Arkansas" />
       </div>
       <div class="photo-tile">
         <img src="nemtecauto2.jpg" alt="Ram 1500 body off frame engine removal at Nemtec Automotive NWA" />
