@@ -332,44 +332,30 @@
       text-align: center;
     }
 
-    .photo-slideshow {
-      position: relative; overflow: hidden;
-      height: 500px;
+    .photo-tile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 280px 280px;
+      gap: 4px;
+      padding: 0 5% 70px;
     }
-    .photo-track {
-      display: flex; height: 100%;
-      transition: transform 0.6s ease;
+    .photo-tile {
+      overflow: hidden; position: relative;
     }
-    .photo-slide {
-      min-width: 100%; height: 100%; flex-shrink: 0;
-      position: relative;
-    }
-    .photo-slide img {
+    .photo-tile img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: center;
+      transition: transform 0.4s ease, filter 0.4s;
+      filter: brightness(0.88) saturate(0.85);
     }
-
-
-    .gallery-nav {
-      display: flex; justify-content: center; align-items: center;
-      gap: 16px; padding: 24px 5%;
+    .photo-tile:hover img {
+      transform: scale(1.05);
+      filter: brightness(1) saturate(1);
     }
-    .gnav-btn {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--steel); border: 1px solid var(--border);
-      color: var(--white); font-size: 1.1rem;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s, border-color 0.2s;
+    /* First tile spans 2 rows */
+    .photo-tile.tall {
+      grid-row: span 2;
     }
-    .gnav-btn:hover { background: var(--green); border-color: var(--green); }
-    .gdots { display: flex; gap: 8px; }
-    .gdot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--border); cursor: pointer;
-      transition: background 0.3s;
-      border: none;
-    }
-    .gdot.active { background: var(--green); }
 
     /* ===================== ABOUT ===================== */
     #about { background: var(--steel); padding: 90px 5%; }
@@ -526,7 +512,8 @@
       .about-accent-box { display: none; }
       .about-main-img { height: 280px; }
       .why-grid { grid-template-columns: 1fr 1fr; }
-      .photo-slideshow { height: 300px; }
+      .photo-tile-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+      .photo-tile.tall { grid-row: span 1; }
       footer { flex-direction: column; text-align: center; }
       .footer-right { text-align: center; }
       .fgrow { grid-template-columns: 1fr; }
@@ -701,40 +688,25 @@
       <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;">See Us In Action</h2>
     </div>
 
-    <div class="photo-slideshow">
-      <div class="photo-track" id="photoTrack">
-        <div class="photo-slide">
-          <img src="shop-exterior.jpg" alt="Nemtec Automotive LLC shop exterior - auto repair Bentonville AR mechanic Hiwasse Arkansas" />
-        </div>
-        <div class="photo-slide">
-          <img src="shop-lift.jpg" alt="Vehicle on lift at Nemtec Automotive - professional auto repair and alignment service Bentonville AR" />
-        </div>
-        <div class="photo-slide">
-          <img src="shop-engine.jpg" alt="Engine timing chain repair at Nemtec Automotive - ASE certified engine repair Bentonville NWA Arkansas" />
-        </div>
-        <div class="photo-slide">
-          <img src="nemtecauto3.jpg" alt="Engine pull on square body Chevy at Nemtec Automotive Bentonville AR" />
-        </div>
-        <div class="photo-slide">
-          <img src="nemtecauto2.jpg" alt="Ram 1500 body off frame engine removal at Nemtec Automotive NWA" />
-        </div>
-        <div class="photo-slide">
-          <img src="nemtecauto.jpg" alt="Engine swap on Kia Soul at Nemtec Automotive Hiwasse Arkansas" />
-        </div>
+    <div class="photo-tile-grid">
+      <div class="photo-tile tall">
+        <img src="shop-exterior.jpg" alt="Nemtec Automotive LLC shop exterior - auto repair Bentonville AR mechanic Hiwasse Arkansas" />
       </div>
-    </div>
-
-    <div class="gallery-nav">
-      <button class="gnav-btn" onclick="moveGallery(-1)">&#8592;</button>
-      <div class="gdots">
-        <button class="gdot active" onclick="goToGallery(0)"></button>
-        <button class="gdot" onclick="goToGallery(1)"></button>
-        <button class="gdot" onclick="goToGallery(2)"></button>
-        <button class="gdot" onclick="goToGallery(3)"></button>
-        <button class="gdot" onclick="goToGallery(4)"></button>
-        <button class="gdot" onclick="goToGallery(5)"></button>
+      <div class="photo-tile">
+        <img src="shop-lift.jpg" alt="Vehicle on lift at Nemtec Automotive - professional auto repair Bentonville AR" />
       </div>
-      <button class="gnav-btn" onclick="moveGallery(1)">&#8594;</button>
+      <div class="photo-tile">
+        <img src="nemtecauto3.jpg" alt="Engine pull on square body Chevy at Nemtec Automotive Bentonville AR" />
+      </div>
+      <div class="photo-tile">
+        <img src="shop-engine.jpg" alt="Engine timing chain repair at Nemtec Automotive - ASE certified engine repair Bentonville NWA" />
+      </div>
+      <div class="photo-tile">
+        <img src="nemtecauto2.jpg" alt="Ram 1500 body off frame engine removal at Nemtec Automotive NWA" />
+      </div>
+      <div class="photo-tile">
+        <img src="nemtecauto.jpg" alt="Engine swap on Kia Soul at Nemtec Automotive Hiwasse Arkansas" />
+      </div>
     </div>
   </section>
 
@@ -919,42 +891,7 @@
 
     startHeroTimer();
 
-    // ---- Gallery Slideshow ----
-    const track = document.getElementById('photoTrack');
-    const gdots = document.querySelectorAll('.gdot');
-    let gCurrent = 0;
-    const gTotal = gdots.length;
-
-    function goToGallery(n) {
-      gCurrent = (n + gTotal) % gTotal;
-      track.style.transform = `translateX(-${gCurrent * 100}%)`;
-      gdots.forEach(d => d.classList.remove('active'));
-      gdots[gCurrent].classList.add('active');
-    }
-
-    function moveGallery(dir) { goToGallery(gCurrent + dir); }
-
-    let galleryTimer;
-
-    function moveGallery(dir) {
-      clearInterval(galleryTimer);
-      goToGallery(gCurrent + dir);
-      startGalleryTimer();
-    }
-
-    function startGalleryTimer() {
-      galleryTimer = setInterval(() => goToGallery((gCurrent + 1) % gTotal), 6000);
-    }
-
-    gdots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        clearInterval(galleryTimer);
-        goToGallery(i);
-        startGalleryTimer();
-      });
-    });
-
-    startGalleryTimer();
+    // Gallery is now a static tile grid - no JS needed
 
     // Mobile menu close on outside click
     document.addEventListener('click', (e) => {
