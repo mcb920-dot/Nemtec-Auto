@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -50,7 +49,6 @@
   </script>
 
   <!-- FAQ Schema for rich snippets -->
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -157,6 +155,9 @@
     .slide-1 { background-image: url('shop-exterior.jpg'); background-position: center 35%; }
     .slide-2 { background-image: url('shop-lift.jpg'); background-position: center center; }
     .slide-3 { background-image: url('shop-engine.jpg'); background-position: center center; }
+    .slide-4 { background-image: url('nemtecauto3.jpg'); background-position: center 30%; }
+    .slide-5 { background-image: url('nemtecauto2.jpg'); background-position: center 25%; }
+    .slide-6 { background-image: url('nemtecauto.jpg'); background-position: center 30%; }
 
     .slide-overlay {
       position: absolute; inset: 0;
@@ -543,12 +544,10 @@
       .why-grid { grid-template-columns: 1fr; }
     }
   </style>
-
 </head>
 <body>
 
   <!-- ===== NAV ===== -->
-
   <nav>
     <a href="#home" class="nav-logo">
       <img src="https://lirp.cdn-website.com/2a569a9c/dms3rep/multi/opt/NEMTECLOGO-removebg-preview-1920w.png"
@@ -580,38 +579,39 @@
   </div>
 
   <!-- ===== HERO SLIDESHOW ===== -->
-
   <div id="home" class="hero-slider">
     <div class="slide slide-1 active"></div>
     <div class="slide slide-2"></div>
     <div class="slide slide-3"></div>
+    <div class="slide slide-4"></div>
+    <div class="slide slide-5"></div>
+    <div class="slide slide-6"></div>
 
-```
-<div class="slide-overlay"></div>
+    <div class="slide-overlay"></div>
 
-<div class="hero-content">
-  <div class="hero-badge">✅ &nbsp;ASE Certified &nbsp;·&nbsp; Est. 2022 &nbsp;·&nbsp; Family Owned</div>
-  <h1>Honest Work.<br /><em>Done Right.</em></h1>
-  <p>Over <a href="#about" style="color:var(--green-lt);text-decoration:none;font-weight:600;">25 years of hands-on experience</a> serving <a href="#contact" style="color:var(--green-lt);text-decoration:none;font-weight:600;">Bentonville and all of NWA</a>. <strong>Fair pricing</strong>, straight talk, and <strong>quality you can trust</strong> — every single time.</p>
-  <div class="hero-btns">
-    <a href="tel:479-273-1010" class="btn-green">📞 &nbsp;Call Now — 479-273-1010</a>
-    <a href="#contact" class="btn-ghost">Get a Free Estimate &rarr;</a>
-  </div>
-</div>
+    <div class="hero-content">
+      <div class="hero-badge">✅ &nbsp;ASE Certified &nbsp;·&nbsp; Est. 2022 &nbsp;·&nbsp; Family Owned</div>
+      <h1>Honest Work.<br /><em>Done Right.</em></h1>
+      <p>Over <a href="#about" style="color:var(--green-lt);text-decoration:none;font-weight:600;">25 years of hands-on experience</a> serving <a href="#contact" style="color:var(--green-lt);text-decoration:none;font-weight:600;">Bentonville and all of NWA</a>. <strong>Fair pricing</strong>, straight talk, and <strong>quality you can trust</strong> — every single time.</p>
+      <div class="hero-btns">
+        <a href="tel:479-273-1010" class="btn-green">📞 &nbsp;Call Now — 479-273-1010</a>
+        <a href="#contact" class="btn-ghost">Get a Free Estimate &rarr;</a>
+      </div>
+    </div>
 
-<div class="slide-dots">
-  <button class="dot active" onclick="goToSlide(0)"></button>
-  <button class="dot" onclick="goToSlide(1)"></button>
-  <button class="dot" onclick="goToSlide(2)"></button>
-</div>
+    <div class="slide-dots">
+      <button class="dot active" onclick="goToSlide(0)"></button>
+      <button class="dot" onclick="goToSlide(1)"></button>
+      <button class="dot" onclick="goToSlide(2)"></button>
+      <button class="dot" onclick="goToSlide(3)"></button>
+      <button class="dot" onclick="goToSlide(4)"></button>
+      <button class="dot" onclick="goToSlide(5)"></button>
+    </div>
 
-<div class="slide-caption" id="slide-caption">The Shop — Hiwasse, AR</div>
-```
-
+    <div class="slide-caption" id="slide-caption">The Shop — Hiwasse, AR</div>
   </div>
 
   <!-- ===== STATS BAR ===== -->
-
   <div class="stats-bar">
     <div class="stat-block">
       <div class="stat-big">25+</div>
@@ -635,8 +635,15 @@
     </div>
   </div>
 
-  <!-- ===== SERVICES ===== -->
+  <!-- ===== PHOTO DIVIDER ===== -->
+  <div class="photo-divider">
+    <img src="nemtecauto2.jpg" alt="Professional auto repair shop Bentonville AR - Nemtec Automotive" />
+    <div class="photo-divider-overlay">
+      <div class="photo-divider-text">No Job Too <span>Big.</span><br />No Job Too <span>Small.</span></div>
+    </div>
+  </div>
 
+  <!-- ===== SERVICES ===== -->
   <section id="services">
     <div class="section-header">
       <div class="section-tag">What We Do</div>
@@ -644,99 +651,106 @@
       <p>From <a href="#contact" style="color:var(--green-lt);text-decoration:none;">routine maintenance</a> to major <a href="#contact" style="color:var(--green-lt);text-decoration:none;">engine repair in Bentonville, AR</a> — every job gets the <strong>same care</strong>, the <strong>same honesty</strong>, and the same standard of quality.</p>
     </div>
 
-```
-<div class="services-grid">
-  <div class="service-card">
-    <div class="svc-icon">🔩</div>
-    <h3>Engine Repair</h3>
-    <p><a href="#contact" style="color:var(--green-lt);text-decoration:none;">Engine repair in Bentonville, AR</a> — diagnostics, rebuilds, and repairs on all makes and models. Check engine lights, strange noises, loss of power — we find it and fix it right.</p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">🔄</div>
-    <h3>Transmission Service</h3>
-    <p><a href="#contact" style="color:var(--green-lt);text-decoration:none;">Transmission repair serving NWA</a> — rough shifting, slipping gears, fluid flushes, and full rebuilds. We diagnose before we recommend — no unnecessary repairs.</p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">🛠️</div>
-    <h3>Routine Maintenance</h3>
-    <p><strong>Oil changes</strong>, filters, tire rotations, and fluid checks. <strong>Regular maintenance</strong> is the cheapest repair you'll ever do.</p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">🛑</div>
-    <h3>Brake Services</h3>
-    <p><a href="#contact" style="color:var(--green-lt);text-decoration:none;">Brake repair near Bentonville, AR</a> — inspections, pad and rotor replacements, brake fluid flushes, and full system repairs. Your safety is always the first priority.</p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">⚡</div>
-    <h3>Electrical Repairs</h3>
-    <p><strong>Battery replacements</strong>, alternator repairs, wiring issues, and full diagnostics. We know <strong>modern vehicle electronics</strong> inside and out.</p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">🌀</div>
-    <h3>Suspension &amp; Steering</h3>
-    <p><strong>Shocks, struts</strong>, power steering, and suspension components. We get your ride <strong>smooth and controlled</strong> again.</p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">❄️</div>
-    <h3>A/C &amp; Heating</h3>
-    <p><strong>Compressor replacements</strong>, refrigerant recharges, blower motors, and heater cores. <strong>Stay comfortable year-round.</strong></p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">💨</div>
-    <h3>Exhaust System</h3>
-    <p><strong>Muffler replacements</strong>, catalytic converters, and exhaust pipes. Proper exhaust keeps your <strong>engine running efficiently</strong>.</p>
-  </div>
-  <div class="service-card">
-    <div class="svc-icon">🔍</div>
-    <h3>Diagnostics</h3>
-    <p>State-of-the-art <a href="#contact" style="color:var(--green-lt);text-decoration:none;">auto diagnostics in Bentonville, AR</a> to pinpoint issues before any work begins. You'll know exactly what's wrong and what it costs to fix.</p>
-  </div>
-</div>
-```
-
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="svc-icon">🔩</div>
+        <h3>Engine Repair</h3>
+        <p><a href="#contact" style="color:var(--green-lt);text-decoration:none;">Engine repair in Bentonville, AR</a> — diagnostics, rebuilds, and repairs on all makes and models. Check engine lights, strange noises, loss of power — we find it and fix it right.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">🔄</div>
+        <h3>Transmission Service</h3>
+        <p><a href="#contact" style="color:var(--green-lt);text-decoration:none;">Transmission repair serving NWA</a> — rough shifting, slipping gears, fluid flushes, and full rebuilds. We diagnose before we recommend — no unnecessary repairs.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">🛠️</div>
+        <h3>Routine Maintenance</h3>
+        <p><strong>Oil changes</strong>, filters, tire rotations, and fluid checks. <strong>Regular maintenance</strong> is the cheapest repair you'll ever do.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">🛑</div>
+        <h3>Brake Services</h3>
+        <p><a href="#contact" style="color:var(--green-lt);text-decoration:none;">Brake repair near Bentonville, AR</a> — inspections, pad and rotor replacements, brake fluid flushes, and full system repairs. Your safety is always the first priority.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">⚡</div>
+        <h3>Electrical Repairs</h3>
+        <p><strong>Battery replacements</strong>, alternator repairs, wiring issues, and full diagnostics. We know <strong>modern vehicle electronics</strong> inside and out.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">🌀</div>
+        <h3>Suspension &amp; Steering</h3>
+        <p><strong>Shocks, struts</strong>, power steering, and suspension components. We get your ride <strong>smooth and controlled</strong> again.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">❄️</div>
+        <h3>A/C &amp; Heating</h3>
+        <p><strong>Compressor replacements</strong>, refrigerant recharges, blower motors, and heater cores. <strong>Stay comfortable year-round.</strong></p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">💨</div>
+        <h3>Exhaust System</h3>
+        <p><strong>Muffler replacements</strong>, catalytic converters, and exhaust pipes. Proper exhaust keeps your <strong>engine running efficiently</strong>.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon">🔍</div>
+        <h3>Diagnostics</h3>
+        <p>State-of-the-art <a href="#contact" style="color:var(--green-lt);text-decoration:none;">auto diagnostics in Bentonville, AR</a> to pinpoint issues before any work begins. You'll know exactly what's wrong and what it costs to fix.</p>
+      </div>
+    </div>
   </section>
 
   <!-- ===== PHOTO GALLERY ===== -->
-
   <section id="photos">
     <div class="gallery-header">
       <div class="section-tag">The Shop</div>
       <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;">See Us In Action</h2>
     </div>
 
-```
-<div class="photo-slideshow">
-  <div class="photo-track" id="photoTrack">
-    <div class="photo-slide">
-      <img src="shop-exterior.jpg" alt="Nemtec Automotive LLC shop exterior - auto repair Bentonville AR mechanic Hiwasse Arkansas" />
-      <div class="photo-slide-caption">📍 &nbsp;The Shop — Hiwasse, AR</div>
+    <div class="photo-slideshow">
+      <div class="photo-track" id="photoTrack">
+        <div class="photo-slide">
+          <img src="shop-exterior.jpg" alt="Nemtec Automotive LLC shop exterior - auto repair Bentonville AR mechanic Hiwasse Arkansas" />
+          <div class="photo-slide-caption">📍 &nbsp;The Shop — Hiwasse, AR</div>
+        </div>
+        <div class="photo-slide">
+          <img src="shop-lift.jpg" alt="Vehicle on lift at Nemtec Automotive - professional auto repair and alignment service Bentonville AR" />
+          <div class="photo-slide-caption">🔧 &nbsp;Atlas Lift — Professional Equipment</div>
+        </div>
+        <div class="photo-slide">
+          <img src="shop-engine.jpg" alt="Engine timing chain repair at Nemtec Automotive - ASE certified engine repair Bentonville NWA Arkansas" />
+          <div class="photo-slide-caption">⚙️ &nbsp;Engine Work — Timing Chain Service</div>
+        </div>
+        <div class="photo-slide">
+          <img src="nemtecauto3.jpg" alt="Engine pull on square body Chevy at Nemtec Automotive Bentonville AR" />
+          <div class="photo-slide-caption">🔩 &nbsp;Engine Pull — Square Body Chevy</div>
+        </div>
+        <div class="photo-slide">
+          <img src="nemtecauto2.jpg" alt="Ram 1500 body off frame engine removal at Nemtec Automotive NWA" />
+          <div class="photo-slide-caption">🛠️ &nbsp;Ram 1500 — Body Off Frame</div>
+        </div>
+        <div class="photo-slide">
+          <img src="nemtecauto.jpg" alt="Engine swap on Kia Soul at Nemtec Automotive Hiwasse Arkansas" />
+          <div class="photo-slide-caption">⚙️ &nbsp;Engine Swap — Kia Soul</div>
+        </div>
+      </div>
     </div>
-    <div class="photo-slide">
-      <img src="shop-lift.jpg" alt="Vehicle on lift at Nemtec Automotive - professional auto repair and alignment service Bentonville AR" />
-      <div class="photo-slide-caption">🔧 &nbsp;Atlas Lift — Professional Equipment</div>
-    </div>
-    <div class="photo-slide">
-      <img src="shop-engine.jpg" alt="Engine timing chain repair at Nemtec Automotive - ASE certified engine repair Bentonville NWA Arkansas" />
-      <div class="photo-slide-caption">⚙️ &nbsp;Engine Work — Timing Chain Service</div>
-    </div>
-  </div>
-</div>
 
-<div class="gallery-nav">
-  <button class="gnav-btn" onclick="moveGallery(-1)">&#8592;</button>
-  <div class="gdots">
-    <button class="gdot active" onclick="goToGallery(0)"></button>
-    <button class="gdot" onclick="goToGallery(1)"></button>
-    <button class="gdot" onclick="goToGallery(2)"></button>
-  </div>
-  <button class="gnav-btn" onclick="moveGallery(1)">&#8594;</button>
-</div>
-```
-
+    <div class="gallery-nav">
+      <button class="gnav-btn" onclick="moveGallery(-1)">&#8592;</button>
+      <div class="gdots">
+        <button class="gdot active" onclick="goToGallery(0)"></button>
+        <button class="gdot" onclick="goToGallery(1)"></button>
+        <button class="gdot" onclick="goToGallery(2)"></button>
+        <button class="gdot" onclick="goToGallery(3)"></button>
+        <button class="gdot" onclick="goToGallery(4)"></button>
+        <button class="gdot" onclick="goToGallery(5)"></button>
+      </div>
+      <button class="gnav-btn" onclick="moveGallery(1)">&#8594;</button>
+    </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
-
   <section id="about">
     <div class="about-grid">
       <div class="about-img-col">
@@ -767,7 +781,6 @@
   </section>
 
   <!-- ===== WHY US ===== -->
-
   <section id="why">
     <div class="section-header">
       <div class="section-tag">Why Nemtec</div>
@@ -798,7 +811,6 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-
   <section id="contact">
     <div class="contact-grid">
       <div class="contact-info-col">
@@ -806,66 +818,62 @@
         <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;text-transform:uppercase;margin-bottom:16px;">Request an<br />Estimate</h2>
         <p>Looking for a <a href='#services' style='color:var(--green-lt);text-decoration:none;'>trusted mechanic near Bentonville, AR</a>? Give us a call, shoot an email, or fill out the form. We'll get back to you quickly with an <strong>honest quote</strong> — <strong>no pressure, no games</strong>.</p>
 
-```
-    <div class="cblock">
-      <div class="cicon">📞</div>
-      <div><div class="clabel">Phone</div><div class="cval"><a href="tel:479-273-1010">479-273-1010</a></div></div>
-    </div>
-    <div class="cblock">
-      <div class="cicon">✉️</div>
-      <div><div class="clabel">Email</div><div class="cval"><a href="/cdn-cgi/l/email-protection#c0aea5adb4a5a3a1b5b4afadafb4a9b6a580a7ada1a9aceea3afad"><span class="__cf_email__" data-cfemail="ec82898198898f8d999883818398859a89ac8b818d8580c28f8381">[email&#160;protected]</span></a></div></div>
-    </div>
-    <div class="cblock">
-      <div class="cicon">📍</div>
-      <div><div class="clabel">Address</div><div class="cval">13610 Forest Hills Blvd<br />Hiwasse, AR 72739</div></div>
-    </div>
+        <div class="cblock">
+          <div class="cicon">📞</div>
+          <div><div class="clabel">Phone</div><div class="cval"><a href="tel:479-273-1010">479-273-1010</a></div></div>
+        </div>
+        <div class="cblock">
+          <div class="cicon">✉️</div>
+          <div><div class="clabel">Email</div><div class="cval"><a href="/cdn-cgi/l/email-protection#c0aea5adb4a5a3a1b5b4afadafb4a9b6a580a7ada1a9aceea3afad"><span class="__cf_email__" data-cfemail="ec82898198898f8d999883818398859a89ac8b818d8580c28f8381">[email&#160;protected]</span></a></div></div>
+        </div>
+        <div class="cblock">
+          <div class="cicon">📍</div>
+          <div><div class="clabel">Address</div><div class="cval">13610 Forest Hills Blvd<br />Hiwasse, AR 72739</div></div>
+        </div>
 
-    <div class="hours-card">
-      <div class="hours-card-head">Hours of Operation</div>
-      <div class="hrow"><span class="hday">Monday – Thursday</span><span class="hopen">7:00 AM – 5:30 PM</span></div>
-      <div class="hrow"><span class="hday">Friday</span><span class="hclosed">Closed</span></div>
-      <div class="hrow"><span class="hday">Saturday</span><span class="hclosed">Closed</span></div>
-      <div class="hrow"><span class="hday">Sunday</span><span class="hclosed">Closed</span></div>
-    </div>
-  </div>
-
-  <div class="contact-form-col">
-    <h3>Quick Estimate Form</h3>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="fgrow">
-        <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" required /></div>
-        <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required /></div>
+        <div class="hours-card">
+          <div class="hours-card-head">Hours of Operation</div>
+          <div class="hrow"><span class="hday">Monday – Thursday</span><span class="hopen">7:00 AM – 5:30 PM</span></div>
+          <div class="hrow"><span class="hday">Friday</span><span class="hclosed">Closed</span></div>
+          <div class="hrow"><span class="hday">Saturday</span><span class="hclosed">Closed</span></div>
+          <div class="hrow"><span class="hday">Sunday</span><span class="hclosed">Closed</span></div>
+        </div>
       </div>
-      <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="479-000-0000" required /></div>
-      <div class="fg"><label>Email</label><input type="email" name="email" placeholder="you@email.com" /></div>
-      <div class="fg"><label>Vehicle (Year / Make / Model)</label><input type="text" name="vehicle" placeholder="e.g. 2019 Chevy Silverado" required /></div>
-      <div class="fg">
-        <label>Service Needed</label>
-        <select name="service">
-          <option value="">Select a service...</option>
-          <option>Engine Repair</option>
-          <option>Transmission Service</option>
-          <option>Routine Maintenance</option>
-          <option>Brake Services</option>
-          <option>Electrical Repairs</option>
-          <option>Suspension &amp; Steering</option>
-          <option>A/C &amp; Heating</option>
-          <option>Exhaust System</option>
-          <option>Diagnostics</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="fg"><label>Tell Us More</label><textarea name="message" placeholder="Describe what's going on with your vehicle..."></textarea></div>
-      <button type="submit" class="fsub">Send Estimate Request &rarr;</button>
-    </form>
-  </div>
-</div>
-```
 
+      <div class="contact-form-col">
+        <h3>Quick Estimate Form</h3>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="fgrow">
+            <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" required /></div>
+            <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required /></div>
+          </div>
+          <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="479-000-0000" required /></div>
+          <div class="fg"><label>Email</label><input type="email" name="email" placeholder="you@email.com" /></div>
+          <div class="fg"><label>Vehicle (Year / Make / Model)</label><input type="text" name="vehicle" placeholder="e.g. 2019 Chevy Silverado" required /></div>
+          <div class="fg">
+            <label>Service Needed</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Engine Repair</option>
+              <option>Transmission Service</option>
+              <option>Routine Maintenance</option>
+              <option>Brake Services</option>
+              <option>Electrical Repairs</option>
+              <option>Suspension &amp; Steering</option>
+              <option>A/C &amp; Heating</option>
+              <option>Exhaust System</option>
+              <option>Diagnostics</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fg"><label>Tell Us More</label><textarea name="message" placeholder="Describe what's going on with your vehicle..."></textarea></div>
+          <button type="submit" class="fsub">Send Estimate Request &rarr;</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
-
   <footer>
     <div class="footer-logo">
       <img src="https://lirp.cdn-website.com/2a569a9c/dms3rep/multi/opt/NEMTECLOGO-removebg-preview-1920w.png"
@@ -886,92 +894,88 @@
   </footer>
 
   <!-- ===== JS ===== -->
-
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // ---- Hero Slideshow ----
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const captions = ['The Shop — Hiwasse, AR', 'Atlas Lift — Professional Equipment', 'Engine Work — Timing Chain', 'Engine Pull — Square Body Chevy', 'Ram 1500 — Body Off Frame', 'Engine Swap — Kia Soul'];
+    const captionEl = document.getElementById('slide-caption');
+    let current = 0;
+    let heroTimer;
 
-```
-// ---- Hero Slideshow ----
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-const captions = ['The Shop — Hiwasse, AR', 'Atlas Lift — Professional Equipment', 'Engine Work — Timing Chain'];
-const captionEl = document.getElementById('slide-caption');
-let current = 0;
-let heroTimer;
+    function goToSlide(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      captionEl.textContent = captions[current];
+    }
 
-function goToSlide(n) {
-  slides[current].classList.remove('active');
-  dots[current].classList.remove('active');
-  current = n;
-  slides[current].classList.add('active');
-  dots[current].classList.add('active');
-  captionEl.textContent = captions[current];
-}
+    function nextSlide() {
+      goToSlide((current + 1) % slides.length);
+    }
 
-function nextSlide() {
-  goToSlide((current + 1) % slides.length);
-}
+    function startHeroTimer() {
+      heroTimer = setInterval(nextSlide, 5000);
+    }
 
-function startHeroTimer() {
-  heroTimer = setInterval(nextSlide, 5000);
-}
+    // Restart timer on manual dot click
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(heroTimer);
+        goToSlide(i);
+        startHeroTimer();
+      });
+    });
 
-// Restart timer on manual dot click
-document.querySelectorAll('.dot').forEach((dot, i) => {
-  dot.addEventListener('click', () => {
-    clearInterval(heroTimer);
-    goToSlide(i);
     startHeroTimer();
-  });
-});
 
-startHeroTimer();
+    // ---- Gallery Slideshow ----
+    const track = document.getElementById('photoTrack');
+    const gdots = document.querySelectorAll('.gdot');
+    let gCurrent = 0;
+    const gTotal = gdots.length;
 
-// ---- Gallery Slideshow ----
-const track = document.getElementById('photoTrack');
-const gdots = document.querySelectorAll('.gdot');
-let gCurrent = 0;
-const gTotal = gdots.length;
+    function goToGallery(n) {
+      gCurrent = (n + gTotal) % gTotal;
+      track.style.transform = `translateX(-${gCurrent * 100}%)`;
+      gdots.forEach(d => d.classList.remove('active'));
+      gdots[gCurrent].classList.add('active');
+    }
 
-function goToGallery(n) {
-  gCurrent = (n + gTotal) % gTotal;
-  track.style.transform = `translateX(-${gCurrent * 100}%)`;
-  gdots.forEach(d => d.classList.remove('active'));
-  gdots[gCurrent].classList.add('active');
-}
+    function moveGallery(dir) { goToGallery(gCurrent + dir); }
 
-function moveGallery(dir) { goToGallery(gCurrent + dir); }
+    let galleryTimer;
 
-let galleryTimer;
+    function moveGallery(dir) {
+      clearInterval(galleryTimer);
+      goToGallery(gCurrent + dir);
+      startGalleryTimer();
+    }
 
-function moveGallery(dir) {
-  clearInterval(galleryTimer);
-  goToGallery(gCurrent + dir);
-  startGalleryTimer();
-}
+    function startGalleryTimer() {
+      galleryTimer = setInterval(() => goToGallery((gCurrent + 1) % gTotal), 6000);
+    }
 
-function startGalleryTimer() {
-  galleryTimer = setInterval(() => goToGallery((gCurrent + 1) % gTotal), 6000);
-}
+    gdots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(galleryTimer);
+        goToGallery(i);
+        startGalleryTimer();
+      });
+    });
 
-gdots.forEach((dot, i) => {
-  dot.addEventListener('click', () => {
-    clearInterval(galleryTimer);
-    goToGallery(i);
     startGalleryTimer();
-  });
-});
 
-startGalleryTimer();
-
-// Mobile menu close on outside click
-document.addEventListener('click', (e) => {
-  const menu = document.querySelector('.mobile-menu');
-  const hamburger = document.querySelector('.hamburger');
-  if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
-    menu.classList.remove('open');
-  }
-});
-```
+    // Mobile menu close on outside click
+    document.addEventListener('click', (e) => {
+      const menu = document.querySelector('.mobile-menu');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
 
   </script>
 
